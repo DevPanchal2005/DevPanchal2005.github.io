@@ -1,183 +1,77 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+document.addEventListener("DOMContentLoaded", () => {
+  // ==============================
+  // NAVBAR BACKGROUND ON SCROLL
+  // ==============================
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("bg-gray-900/80", window.scrollY > 50);
+  });
+
+  // ==============================
+  // SECTION FADE / SLIDE ANIMATIONS
+  // ==============================
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("opacity-100", "translate-y-0");
+          observer.unobserve(entry.target);
+        }
       });
-    }
+    },
+    { threshold: 0.2 }
+  );
+
+  document.querySelectorAll("[data-animate]").forEach((el) => {
+    el.classList.add(
+      "opacity-0",
+      "translate-y-6",
+      "transition-all",
+      "duration-700"
+    );
+    observer.observe(el);
   });
-});
 
-// Navbar background on scroll
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate-fade-in");
-    }
-  });
-}, observerOptions);
-
-// Observe all sections for animations
-document.querySelectorAll("section").forEach((section) => {
-  observer.observe(section);
-});
-
-// Add active state to navigation links
-window.addEventListener("scroll", () => {
+  // ==============================
+  // NAV HIGHLIGHT ON SCROLL (with data-active)
+  // ==============================
   const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll("nav a");
 
-  let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (window.scrollY >= sectionTop - 200) {
-      current = section.getAttribute("id");
-    }
-  });
+  function activateLink() {
+    let scrollY = window.scrollY + 100; // offset for fixed nav
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const id = section.getAttribute("id");
 
-  navLinks.forEach((link) => {
-    link.classList.remove("text-primary-400");
-    link.classList.add("text-gray-300");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.remove("text-gray-300");
-      link.classList.add("text-primary-400");
-    }
-  });
-});
-
-// Typing animation for hero title
-function typeWriter(element, text, speed = 100) {
-  let i = 0;
-  element.innerHTML = "";
-
-  function type() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-
-  type();
-}
-
-// Initialize typing animation when page loads
-window.addEventListener("load", () => {
-  const heroTitle = document.querySelector(".hero-title");
-  if (heroTitle) {
-    const originalText = heroTitle.innerHTML;
-    setTimeout(() => {
-      typeWriter(heroTitle, originalText, 50);
-    }, 500);
-  }
-});
-
-
-
-// Add hover effects to project cards
-document
-  .querySelectorAll('.project-card, [class*="hover:border-primary-400"]')
-  .forEach((card) => {
-    card.addEventListener("mouseenter", function () {
-      this.style.transform = "translateY(-8px)";
-    });
-
-    card.addEventListener("mouseleave", function () {
-      this.style.transform = "translateY(0)";
-    });
-  });
-
-// Add loading animation
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-});
-
-// Smooth reveal animations for elements
-const revealElements = document.querySelectorAll(".animate-slide-up");
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.removeAttribute("data-active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.setAttribute("data-active", "true");
+          }
+        });
       }
     });
-  },
-  { threshold: 0.1 }
-);
-
-revealElements.forEach((element) => {
-  element.style.opacity = "0";
-  element.style.transform = "translateY(30px)";
-  element.style.transition = "all 0.6s ease-out";
-  revealObserver.observe(element);
+  }
+  window.addEventListener("scroll", activateLink);
+  activateLink();
+  
+  // ==============================
+  // BOTTOM NAVBAR SHOW/HIDE
+  // ==============================
+  const bottomNav = document.getElementById("bottom-nav");
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    const current = window.scrollY;
+    if (current > lastScrollY) {
+      bottomNav.classList.add("translate-y-full");
+    } else {
+      bottomNav.classList.remove("translate-y-full");
+    }
+    lastScrollY = current;
+  });
 });
 
-// Bottom navigation logic
-const bottomNav = document.getElementById('bottom-nav');
-if (bottomNav) {
-    const bottomNavLinks = Array.from(bottomNav.querySelectorAll('.bottom-nav-link'));
-    const bottomNavContainer = bottomNav.querySelector('.overflow-x-auto');
 
-    const updateBottomNav = (currentSectionId) => {
-        const currentLink = bottomNavLinks.find(link => link.dataset.section === currentSectionId);
-
-        if (currentLink) {
-            const containerRect = bottomNavContainer.getBoundingClientRect();
-            const linkRect = currentLink.getBoundingClientRect();
-
-            const scrollLeft = bottomNavContainer.scrollLeft + linkRect.left - containerRect.left - (containerRect.width / 2) + (linkRect.width / 2);
-
-            bottomNavContainer.scrollTo({
-                left: scrollLeft,
-                behavior: 'smooth'
-            });
-
-            bottomNavLinks.forEach(link => {
-                link.classList.remove('text-primary-400');
-                link.classList.add('text-gray-400');
-            });
-            currentLink.classList.remove('text-gray-400');
-            currentLink.classList.add('text-primary-400');
-        }
-    };
-
-    const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                updateBottomNav(entry.target.id);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section[id]').forEach(section => {
-        sectionObserver.observe(section);
-    });
-
-    // Set initial state on page load
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            updateBottomNav('home');
-        }, 100); // Small delay to ensure layout is calculated
-    });
-}
