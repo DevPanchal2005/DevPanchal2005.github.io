@@ -116,3 +116,13 @@ body:not(.loaded)::before {
 .accent-glow:hover {
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
 }
+
+/* Bottom Navigation for Mobile */
+.md\:hidden .overflow-x-auto {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.md\:hidden .overflow-x-auto::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}

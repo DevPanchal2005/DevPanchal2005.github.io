@@ -1,19 +1,3 @@
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-mobileMenuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
-
-// Close mobile menu when clicking on a link
-const mobileLinks = mobileMenu.querySelectorAll("a");
-mobileLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-  });
-});
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -155,3 +139,52 @@ revealElements.forEach((element) => {
   element.style.transition = "all 0.6s ease-out";
   revealObserver.observe(element);
 });
+
+// Bottom navigation logic
+const bottomNav = document.getElementById('bottom-nav');
+if (bottomNav) {
+    const bottomNavLinks = Array.from(bottomNav.querySelectorAll('.bottom-nav-link'));
+    const bottomNavContainer = bottomNav.querySelector('.overflow-x-auto');
+
+    const updateBottomNav = (currentSectionId) => {
+        const currentLink = bottomNavLinks.find(link => link.dataset.section === currentSectionId);
+
+        if (currentLink) {
+            const containerRect = bottomNavContainer.getBoundingClientRect();
+            const linkRect = currentLink.getBoundingClientRect();
+
+            const scrollLeft = bottomNavContainer.scrollLeft + linkRect.left - containerRect.left - (containerRect.width / 2) + (linkRect.width / 2);
+
+            bottomNavContainer.scrollTo({
+                left: scrollLeft,
+                behavior: 'smooth'
+            });
+
+            bottomNavLinks.forEach(link => {
+                link.classList.remove('text-primary-400');
+                link.classList.add('text-gray-400');
+            });
+            currentLink.classList.remove('text-gray-400');
+            currentLink.classList.add('text-primary-400');
+        }
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                updateBottomNav(entry.target.id);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section[id]').forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    // Set initial state on page load
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            updateBottomNav('home');
+        }, 100); // Small delay to ensure layout is calculated
+    });
+}
