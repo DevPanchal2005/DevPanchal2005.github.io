@@ -35,8 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==============================
   // NAV HIGHLIGHT ON SCROLL (with data-active)
   // ==============================
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll("nav a");
+const sections = document.querySelectorAll("section[id]");
+  const topNavLinks = document.querySelectorAll("#top-nav a");
+  const bottomNavLinks = document.querySelectorAll("#bottom-nav a");
+
+  function setActive(navLinks, id) {
+    navLinks.forEach((link) => {
+      link.removeAttribute("data-active");
+      if (link.getAttribute("href") === `#${id}`) {
+        link.setAttribute("data-active", "true");
+      }
+    });
+  }
 
   function activateLink() {
     let scrollY = window.scrollY + 100; // offset for fixed nav
@@ -46,32 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const id = section.getAttribute("id");
 
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        navLinks.forEach((link) => {
-          link.removeAttribute("data-active");
-          if (link.getAttribute("href") === `#${id}`) {
-            link.setAttribute("data-active", "true");
-          }
-        });
+        setActive(topNavLinks, id);
+        setActive(bottomNavLinks, id);
       }
     });
   }
+
   window.addEventListener("scroll", activateLink);
   activateLink();
-  
-  // ==============================
-  // BOTTOM NAVBAR SHOW/HIDE
-  // ==============================
-  const bottomNav = document.getElementById("bottom-nav");
-  let lastScrollY = window.scrollY;
-  window.addEventListener("scroll", () => {
-    const current = window.scrollY;
-    if (current > lastScrollY) {
-      bottomNav.classList.add("translate-y-full");
-    } else {
-      bottomNav.classList.remove("translate-y-full");
-    }
-    lastScrollY = current;
-  });
 });
 
 
