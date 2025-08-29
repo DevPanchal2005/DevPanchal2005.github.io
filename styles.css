@@ -43,16 +43,16 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #1f2937;
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00d4ff;
+    background: #00ffff;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00b8e6;
+    background: #00e6e6;
 }
 
 /* Smooth transitions for all interactive elements */
@@ -72,7 +72,7 @@ body:not(.loaded)::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #0a0a0a;
+    background: #000000;
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -81,19 +81,38 @@ body:not(.loaded)::before {
 
 /* Navbar scroll effect */
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.98);
-    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+    background: rgba(0, 0, 0, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.15);
 }
 
 /* Enhanced hover effects */
 .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
 }
 
 /* Text gradient effect */
 .text-gradient {
-    background: linear-gradient(135deg, #00d4ff, #0284c7);
+    background: linear-gradient(135deg, #00ffff, #00cccc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Enhanced dark mode styles */
+.dark-card {
+    background: linear-gradient(145deg, #111111, #000000);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dark-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 255, 255, 0.1);
+}
+
+/* Accent glow effects */
+.accent-glow {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.accent-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
 }

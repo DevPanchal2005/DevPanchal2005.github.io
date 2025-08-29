@@ -14,16 +14,16 @@
                 extend: {
                     colors: {
                         primary: {
-                            50: '#f0fdff',
-                            100: '#ccf7fe',
-                            200: '#99eefd',
-                            300: '#60defa',
-                            400: '#00d4ff',
-                            500: '#00b8e6',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            200: '#a5f3fc',
+                            300: '#67e8f9',
+                            400: '#00ffff',
+                            500: '#00e6e6',
+                            600: '#00cccc',
+                            700: '#0891b2',
+                            800: '#0e7490',
+                            900: '#164e63',
                         }
                     },
                     fontFamily: {
@@ -54,73 +54,72 @@
     </script>
 </head>
 
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-black text-white font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50">
+    <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-sm border-b border-gray-900 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="text-xl font-bold text-primary-400">Dev Panchal</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Home</a>
+                    <a href="#home" class="text-gray-400 hover:text-primary-400 transition-colors duration-300">Home</a>
                     <a href="#about"
-                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300">About</a>
+                        class="text-gray-400 hover:text-primary-400 transition-colors duration-300">About</a>
                     <a href="#projects"
-                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Projects</a>
+                        class="text-gray-400 hover:text-primary-400 transition-colors duration-300">Projects</a>
                     <a href="#skills"
-                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Skills</a>
+                        class="text-gray-400 hover:text-primary-400 transition-colors duration-300">Skills</a>
                     <a href="#education"
-                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Education</a>
+                        class="text-gray-400 hover:text-primary-400 transition-colors duration-300">Education</a>
                     <a href="#contact"
-                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Contact</a>
+                        class="text-gray-400 hover:text-primary-400 transition-colors duration-300">Contact</a>
                 </div>
-                <button class="md:hidden text-gray-300 hover:text-primary-400" id="mobile-menu-btn">
+                <button class="md:hidden text-gray-400 hover:text-primary-400" id="mobile-menu-btn">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-gray-800 border-t border-gray-700" id="mobile-menu">
+        <div class="md:hidden hidden bg-gray-900 border-t border-gray-800" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home"
-                    class="block px-3 py-2 text-gray-300 hover:text-primary-400 transition-colors duration-300">Home</a>
+                    class="block px-3 py-2 text-gray-400 hover:text-primary-400 transition-colors duration-300">Home</a>
                 <a href="#about"
-                    class="block px-3 py-2 text-gray-300 hover:text-primary-400 transition-colors duration-300">About</a>
+                    class="block px-3 py-2 text-gray-400 hover:text-primary-400 transition-colors duration-300">About</a>
                 <a href="#projects"
-                    class="block px-3 py-2 text-gray-300 hover:text-primary-400 transition-colors duration-300">Projects</a>
+                    class="block px-3 py-2 text-gray-400 hover:text-primary-400 transition-colors duration-300">Projects</a>
                 <a href="#skills"
-                    class="block px-3 py-2 text-gray-300 hover:text-primary-400 transition-colors duration-300">Skills</a>
+                    class="block px-3 py-2 text-gray-400 hover:text-primary-400 transition-colors duration-300">Skills</a>
                 <a href="#education"
-                    class="block px-3 py-2 text-gray-300 hover:text-primary-400 transition-colors duration-300">Education</a>
+                    class="block px-3 py-2 text-gray-400 hover:text-primary-400 transition-colors duration-300">Education</a>
                 <a href="#contact"
-                    class="block px-3 py-2 text-gray-300 hover:text-primary-400 transition-colors duration-300">Contact</a>
+                    class="block px-3 py-2 text-gray-400 hover:text-primary-400 transition-colors duration-300">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Home Section -->
     <section id="home"
-        class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800">
+        class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-black via-gray-900 to-black">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="animate-fade-in">
                 <div class="mb-8">
-                    <img src="assets/profile_photo.jpg"
-                        alt="Dev Panchal"
-                        class="w-32 h-32 rounded-full mx-auto border-4 border-primary-400 shadow-lg shadow-primary-400/20 animate-float">
+                    <img src="assets/profile_photo.jpg" alt="Dev Panchal"
+                        class="w-32 h-32 rounded-full mx-auto border-4 border-primary-400 shadow-lg shadow-primary-400/30 animate-float">
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold mb-6">
                     Hi, I'm <span class="text-primary-400">Dev Panchal</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
                     I help innovators solve real-world problems using Machine Learning. Let's collaborate and build
                     something impactful.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#projects"
-                        class="bg-primary-400 hover:bg-primary-500 text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/30 transform hover:-translate-y-1">
+                        class="bg-primary-400 hover:bg-primary-500 text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/40 transform hover:-translate-y-1">
                         View My Work
                     </a>
                     <a href="#contact"
-                        class="border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1">
+                        class="border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1">
                         Get In Touch
                     </a>
                 </div>
@@ -129,11 +128,11 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800">
+    <section id="about" class="py-20 bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-primary-400">About Me</h2>
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-900 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-700">
+                <div class="bg-black rounded-2xl p-8 md:p-12 shadow-xl border border-gray-800">
                     <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
                         <p>
                             Currently pursuing a Bachelor's in Computer Engineering with a specialization in
@@ -159,121 +158,130 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-900">
+    <section id="projects" class="py-20 bg-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-primary-400">Featured Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div
-                    class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/10 transform hover:-translate-y-2">
+                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-semibold text-white">Project 1</h3>
                         <div class="flex space-x-3">
                             <a href="https://github.com/devpanchal/project1" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                             <a href="https://devpanchal.github.io/project1" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fas fa-external-link-alt text-lg"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="text-gray-300 mb-4">This is a short description of project 1</p>
+                    <p class="text-gray-400 mb-4">This is a short description of project 1</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag1</span>
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag2</span>
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag3</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag2</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag3</span>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div
-                    class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/10 transform hover:-translate-y-2">
+                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-semibold text-white">Project 2</h3>
                         <div class="flex space-x-3">
                             <a href="https://github.com/devpanchal/project2" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                             <a href="https://devpanchal.github.io/project2" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fas fa-external-link-alt text-lg"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="text-gray-300 mb-4">This is a short description of project 2</p>
+                    <p class="text-gray-400 mb-4">This is a short description of project 2</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag1</span>
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag2</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag2</span>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div
-                    class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/10 transform hover:-translate-y-2">
+                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-semibold text-white">Project 3</h3>
                         <div class="flex space-x-3">
                             <a href="https://github.com/devpanchal/project3" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                             <a href="https://devpanchal.github.io/project3" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fas fa-external-link-alt text-lg"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="text-gray-300 mb-4">This is a short description of project 3</p>
+                    <p class="text-gray-400 mb-4">This is a short description of project 3</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag1</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
                 <div
-                    class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/10 transform hover:-translate-y-2">
+                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-semibold text-white">Project 4</h3>
                         <div class="flex space-x-3">
                             <a href="https://github.com/devpanchal/project4" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                             <a href="https://devpanchal.github.io/project4" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fas fa-external-link-alt text-lg"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="text-gray-300 mb-4">This is a short description of project 4</p>
+                    <p class="text-gray-400 mb-4">This is a short description of project 4</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag1</span>
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag2</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag2</span>
                     </div>
                 </div>
 
                 <!-- Project 5 -->
                 <div
-                    class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/10 transform hover:-translate-y-2">
+                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-semibold text-white">Project 5</h3>
                         <div class="flex space-x-3">
                             <a href="https://github.com/devpanchal/project5" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                             <a href="https://devpanchal.github.io/project5" target="_blank"
-                                class="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
                                 <i class="fas fa-external-link-alt text-lg"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="text-gray-300 mb-4">This is a short description of project 5</p>
+                    <p class="text-gray-400 mb-4">This is a short description of project 5</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm">tag1</span>
+                        <span
+                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
                     </div>
                 </div>
             </div>
@@ -281,40 +289,40 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-800">
+    <section id="skills" class="py-20 bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-primary-400">Skills & Technologies</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                
+
                 <div class="flex flex-col items-center group">
                     <div
-                        class="w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center border border-gray-700 group-hover:border-cyan-400/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-400/20">
+                        class="w-16 h-16 bg-black rounded-xl flex items-center justify-center border border-gray-800 group-hover:border-primary-400/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary-400/30">
                         <img src="assets/logo/TensorFlow.png" alt="TensorFlow" class="w-10 h-10 object-contain">
                     </div>
                     <span
-                        class="text-sm text-gray-300 mt-2 group-hover:text-cyan-400 transition-colors duration-300">TensorFlow</span>
+                        class="text-sm text-gray-400 mt-2 group-hover:text-primary-400 transition-colors duration-300">TensorFlow</span>
                 </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-gray-900">
+    <section id="education" class="py-20 bg-black">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-primary-400">Education</h2>
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-800 rounded-2xl p-8 md:p-12 border border-gray-700 mb-12">
+                <div class="bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-800 mb-12">
                     <div class="text-center mb-8">
                         <h3 class="text-2xl font-bold text-white mb-2">Bachelor's in Computer Engineering</h3>
                         <p class="text-lg text-primary-400 mb-1">AI and Data Science Specialization</p>
-                        <p class="text-gray-400">LJ University</p>
+                        <p class="text-gray-500">LJ University</p>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Semester 1 -->
                     <div
-                        class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300">
+                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
                         <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 1</h4>
-                        <ul class="space-y-2 text-gray-300">
+                        <ul class="space-y-2 text-gray-400">
                             <li class="flex items-center"><i class="fas fa-check text-primary-400 mr-2 text-sm"></i>Core
                                 Java</li>
                             <li class="flex items-center"><i
@@ -332,9 +340,9 @@
 
                     <!-- Semester 2 -->
                     <div
-                        class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300">
+                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
                         <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 2</h4>
-                        <ul class="space-y-2 text-gray-300">
+                        <ul class="space-y-2 text-gray-400">
                             <li class="flex items-center"><i
                                     class="fas fa-check text-primary-400 mr-2 text-sm"></i>Advanced Java</li>
                             <li class="flex items-center"><i
@@ -352,9 +360,9 @@
 
                     <!-- Semester 3 -->
                     <div
-                        class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300">
+                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
                         <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 3</h4>
-                        <ul class="space-y-2 text-gray-300">
+                        <ul class="space-y-2 text-gray-400">
                             <li class="flex items-center"><i
                                     class="fas fa-check text-primary-400 mr-2 text-sm"></i>Python</li>
                             <li class="flex items-center"><i class="fas fa-check text-primary-400 mr-2 text-sm"></i>Full
@@ -367,9 +375,9 @@
 
                     <!-- Semester 4 -->
                     <div
-                        class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-primary-400/50 transition-all duration-300">
+                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
                         <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 4</h4>
-                        <ul class="space-y-2 text-gray-300">
+                        <ul class="space-y-2 text-gray-400">
                             <li class="flex items-center"><i
                                     class="fas fa-check text-primary-400 mr-2 text-sm"></i>Advanced Python</li>
                             <li class="flex items-center"><i
@@ -387,9 +395,9 @@
 
                     <!-- Upcoming Semesters -->
                     <div
-                        class="bg-gray-800 rounded-xl p-6 border border-gray-700 opacity-60 md:col-span-2 lg:col-span-1">
-                        <h4 class="text-lg font-semibold mb-4 text-gray-400">Semester 5-8</h4>
-                        <p class="text-gray-500 text-center py-8">Upcoming Semesters</p>
+                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 opacity-50 md:col-span-2 lg:col-span-1">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-500">Semester 5-8</h4>
+                        <p class="text-gray-600 text-center py-8">Upcoming Semesters</p>
                     </div>
                 </div>
             </div>
@@ -397,26 +405,26 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800">
+    <section id="contact" class="py-20 bg-gray-900">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary-400">Let's Connect</h2>
-            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
                 Ready to collaborate on your next project? Let's discuss how we can work together to create something
                 amazing.
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="mailto:dev@example.com"
-                    class="bg-gray-900 hover:bg-primary-400 text-white hover:text-gray-900 px-8 py-4 rounded-xl border border-gray-700 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1">
+                    class="bg-black hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-gray-800 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
                     <i class="fas fa-envelope text-xl"></i>
                     <span class="font-semibold">Email</span>
                 </a>
                 <a href="https://linkedin.com/in/devpanchal" target="_blank"
-                    class="bg-gray-900 hover:bg-primary-400 text-white hover:text-gray-900 px-8 py-4 rounded-xl border border-gray-700 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1">
+                    class="bg-black hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-gray-800 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
                     <i class="fab fa-linkedin text-xl"></i>
                     <span class="font-semibold">LinkedIn</span>
                 </a>
                 <a href="https://github.com/devpanchal" target="_blank"
-                    class="bg-gray-900 hover:bg-primary-400 text-white hover:text-gray-900 px-8 py-4 rounded-xl border border-gray-700 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1">
+                    class="bg-black hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-gray-800 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
                     <i class="fab fa-github text-xl"></i>
                     <span class="font-semibold">GitHub</span>
                 </a>
@@ -425,9 +433,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+    <footer class="bg-black border-t border-gray-900 py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400">&copy; 2025 Dev Panchal. All rights reserved.</p>
+            <p class="text-gray-500">&copy; 2025 Dev Panchal. All rights reserved.</p>
         </div>
     </footer>
 
