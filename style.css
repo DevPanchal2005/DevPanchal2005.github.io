@@ -47,55 +47,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00ffff;
+    background: #EC0B43;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00e6e6;
+    background: #f94f70;
 }
 
 /* Smooth transitions for all interactive elements */
 * {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Loading state */
-body:not(.loaded) {
-    overflow: hidden;
-}
-
-body:not(.loaded)::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000000;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Navbar scroll effect */
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.98);
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.15);
-}
-
-/* Enhanced hover effects */
-.hover-glow:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-}
-
-/* Text gradient effect */
-.text-gradient {
-    background: linear-gradient(135deg, #00ffff, #00cccc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 /* Enhanced dark mode styles */
@@ -105,16 +67,7 @@ body:not(.loaded)::before {
 }
 
 .dark-card:hover {
-    box-shadow: 0 12px 40px rgba(0, 255, 255, 0.1);
-}
-
-/* Accent glow effects */
-.accent-glow {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-}
-
-.accent-glow:hover {
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(236, 11, 67, 0.2); /* accent glow on hover */
 }
 
 /* Bottom Navigation for Mobile */
