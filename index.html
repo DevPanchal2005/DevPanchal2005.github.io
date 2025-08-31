@@ -165,133 +165,213 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" data-animate class="min-h-screen flex items-center justify-center bg-black py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-primary-400">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div
-                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold text-white">Project 1</h3>
-                        <div class="flex space-x-3">
-                            <a href="https://github.com/devpanchal/project1" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="https://devpanchal.github.io/project1" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fas fa-external-link-alt text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-4">This is a short description of project 1</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag2</span>
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag3</span>
+    <section id="projects" data-animate class="min-h-screen flex flex-col bg-black py-16">
+        <!-- Proper heading, not part of flex row -->
+        <div class="w-full text-center mb-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary-400">
+                Featured Projects
+            </h2>
+        </div>
+        <div id="carousel"
+            class="flex overflow-x-auto overflow-y-hidden space-x-6 px-6 pb-8 snap-x snap-mandatory scroll-smooth scrollbar-hide touch-pan-x w-full"
+            style="touch-action: pan-x;"> <!-- explicit inlined too for compatibility -->
+
+            <!-- Project 1 -->
+            <div
+                class="dark-card snap-center flex-shrink-0 w-[85vw] h-[70vh] max-w-3xl rounded-2xl shadow-lg overflow-hidden relative">
+
+                <!-- Image with icons overlay -->
+                <div class="relative h-1/2 w-full">
+                    <img src="assets/projects/PredictGrad.png" alt="PredictGrad" class="w-full h-full object-cover">
+
+                    <!-- Icon buttons -->
+                    <div class="absolute top-3 right-3 flex space-x-3">
+                        <!-- External link icon -->
+                        <a href="#" target="_blank" class="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-5h5v5m-10 6L21 3" />
+                            </svg>
+                        </a>
+
+                        <!-- GitHub icon -->
+                        <a href="#" target="_blank" class="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.96c-3.2.7-3.88-1.39-3.88-1.39-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.72 1.27 3.39.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.57.23 2.73.11 3.02.75.8 1.2 1.82 1.2 3.07 0 4.41-2.68 5.38-5.24 5.66.42.36.8 1.09.8 2.21v3.28c0 .3.21.67.79.55C20.71 21.39 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div
-                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold text-white">Project 2</h3>
-                        <div class="flex space-x-3">
-                            <a href="https://github.com/devpanchal/project2" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="https://devpanchal.github.io/project2" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fas fa-external-link-alt text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-4">This is a short description of project 2</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag2</span>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div
-                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold text-white">Project 3</h3>
-                        <div class="flex space-x-3">
-                            <a href="https://github.com/devpanchal/project3" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="https://devpanchal.github.io/project3" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fas fa-external-link-alt text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-4">This is a short description of project 3</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div
-                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold text-white">Project 4</h3>
-                        <div class="flex space-x-3">
-                            <a href="https://github.com/devpanchal/project4" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="https://devpanchal.github.io/project4" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fas fa-external-link-alt text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-4">This is a short description of project 4</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag2</span>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div
-                    class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-400/20 transform hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold text-white">Project 5</h3>
-                        <div class="flex space-x-3">
-                            <a href="https://github.com/devpanchal/project5" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="https://devpanchal.github.io/project5" target="_blank"
-                                class="text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                                <i class="fas fa-external-link-alt text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-4">This is a short description of project 5</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="bg-primary-400/15 text-primary-400 px-3 py-1 rounded-full text-sm border border-primary-400/30">tag1</span>
-                    </div>
+                <!-- Text content -->
+                <div class="p-6 flex flex-col h-1/2">
+                    <h3 class="text-2xl font-semibold mb-2">Project One</h3>
+                    <p class="text-gray-300 flex-1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ante id lorem.
+                    </p>
                 </div>
             </div>
+
+
+            <!-- Project 2 -->
+            <div
+                class="dark-card snap-center flex-shrink-0 w-[85vw] h-[70vh] max-w-3xl rounded-2xl shadow-lg overflow-hidden relative">
+
+                <!-- Image with icons overlay -->
+                <div class="relative h-1/2 w-full">
+                    <img src="https://via.placeholder.com/1200x500" alt="Project 1" class="w-full h-full object-cover">
+
+                    <!-- Icon buttons -->
+                    <div class="absolute top-3 right-3 flex space-x-3">
+                        <!-- External link icon -->
+                        <a href="#" target="_blank" class="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-5h5v5m-10 6L21 3" />
+                            </svg>
+                        </a>
+
+                        <!-- GitHub icon -->
+                        <a href="#" target="_blank" class="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.96c-3.2.7-3.88-1.39-3.88-1.39-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.72 1.27 3.39.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.57.23 2.73.11 3.02.75.8 1.2 1.82 1.2 3.07 0 4.41-2.68 5.38-5.24 5.66.42.36.8 1.09.8 2.21v3.28c0 .3.21.67.79.55C20.71 21.39 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Text content -->
+                <div class="p-6 flex flex-col h-1/2">
+                    <h3 class="text-2xl font-semibold mb-2">Project Two</h3>
+                    <p class="text-gray-300 flex-1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ante id lorem.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+                class="dark-card snap-center flex-shrink-0 w-[85vw] h-[70vh] max-w-3xl rounded-2xl shadow-lg overflow-hidden relative">
+
+                <!-- Image with icons overlay -->
+                <div class="relative h-1/2 w-full">
+                    <img src="https://via.placeholder.com/1200x500" alt="Project 1" class="w-full h-full object-cover">
+
+                    <!-- Icon buttons -->
+                    <div class="absolute top-3 right-3 flex space-x-3">
+                        <!-- External link icon -->
+                        <a href="#" target="_blank" class="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-5h5v5m-10 6L21 3" />
+                            </svg>
+                        </a>
+
+                        <!-- GitHub icon -->
+                        <a href="#" target="_blank" class="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.96c-3.2.7-3.88-1.39-3.88-1.39-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.72 1.27 3.39.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.57.23 2.73.11 3.02.75.8 1.2 1.82 1.2 3.07 0 4.41-2.68 5.38-5.24 5.66.42.36.8 1.09.8 2.21v3.28c0 .3.21.67.79.55C20.71 21.39 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Text content -->
+                <div class="p-6 flex flex-col h-1/2">
+                    <h3 class="text-2xl font-semibold mb-2">Project Three</h3>
+                    <p class="text-gray-300 flex-1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ante id lorem.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div
+                class="dark-card flex-shrink-0 w-[85vw] h-[70vh] max-w-3xl rounded-2xl shadow-lg overflow-hidden relative">
+
+                <!-- Image with icons overlay -->
+                <div class="relative h-1/2 w-full">
+                    <img src="https://via.placeholder.com/1200x500" alt="Project 1" class="w-full h-full object-cover">
+
+                    <!-- Icon buttons -->
+                    <div class="absolute top-3 right-3 flex space-x-3">
+                        <!-- External link icon -->
+                        <a href="#" target="_blank" class="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-5h5v5m-10 6L21 3" />
+                            </svg>
+                        </a>
+
+                        <!-- GitHub icon -->
+                        <a href="#" target="_blank" class="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.96c-3.2.7-3.88-1.39-3.88-1.39-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.72 1.27 3.39.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.57.23 2.73.11 3.02.75.8 1.2 1.82 1.2 3.07 0 4.41-2.68 5.38-5.24 5.66.42.36.8 1.09.8 2.21v3.28c0 .3.21.67.79.55C20.71 21.39 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Text content -->
+                <div class="p-6 flex flex-col h-1/2">
+                    <h3 class="text-2xl font-semibold mb-2">Project Four</h3>
+                    <p class="text-gray-300 flex-1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ante id lorem.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div
+                class="dark-card flex-shrink-0 w-[85vw] h-[70vh] max-w-3xl rounded-2xl shadow-lg overflow-hidden relative">
+
+                <!-- Image with icons overlay -->
+                <div class="relative h-1/2 w-full">
+                    <img src="https://via.placeholder.com/1200x500" alt="Project 1" class="w-full h-full object-cover">
+
+                    <!-- Icon buttons -->
+                    <div class="absolute top-3 right-3 flex space-x-3">
+                        <!-- External link icon -->
+                        <a href="#" target="_blank" class="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-5h5v5m-10 6L21 3" />
+                            </svg>
+                        </a>
+
+                        <!-- GitHub icon -->
+                        <a href="#" target="_blank" class="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.96c-3.2.7-3.88-1.39-3.88-1.39-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.72 1.27 3.39.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.57.23 2.73.11 3.02.75.8 1.2 1.82 1.2 3.07 0 4.41-2.68 5.38-5.24 5.66.42.36.8 1.09.8 2.21v3.28c0 .3.21.67.79.55C20.71 21.39 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Text content -->
+                <div class="p-6 flex flex-col h-1/2">
+                    <h3 class="text-2xl font-semibold mb-2">Project Five</h3>
+                    <p class="text-gray-300 flex-1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ante id lorem.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -677,8 +757,7 @@
         </div>
     </nav>
 
-
-
+    <!-- Scripts -->
     <script src="script.js"></script>
 
     <!-- Globe Animated Background -->

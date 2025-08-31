@@ -66,4 +66,28 @@ const sections = document.querySelectorAll("section[id]");
   activateLink();
 });
 
+// ==============================
+// CAROUSEL
+// ==============================
+
+const carousel = document.getElementById("carousel");
+
+carousel.addEventListener(
+  "wheel",
+  (e) => {
+    const atStart = carousel.scrollLeft === 0;
+    const atEnd =
+      carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+
+    if ((e.deltaY > 0 && !atEnd) || (e.deltaY < 0 && !atStart)) {
+      // redirect vertical → horizontal scroll
+      e.preventDefault();
+      carousel.scrollBy({
+        left: e.deltaY,
+        behavior: "smooth",
+      });
+    }
+  },
+  { passive: false }
+);
 

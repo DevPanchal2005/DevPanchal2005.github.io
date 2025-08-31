@@ -37,9 +37,10 @@
     animation: float 6s ease-in-out infinite;
 }
 
-/* Custom scrollbar */
+/* Base scrollbar (vertical) */
 ::-webkit-scrollbar {
     width: 8px;
+    height: 8px; /* horizontal bar thickness */
 }
 
 ::-webkit-scrollbar-track {
@@ -48,26 +49,49 @@
 
 ::-webkit-scrollbar-thumb {
     background: #EC0B43;
-    border-radius: 4px;
+    border-radius: 9999px; /* pill shaped */
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #f94f70;
 }
 
+
+/* --- More sleek look for the project carousel only --- */
+#carousel::-webkit-scrollbar {
+    height: 6px; /* thinner horizontal bar */
+}
+
+#carousel::-webkit-scrollbar-track {
+    background: transparent; /* makes it floaty */
+}
+
+#carousel::-webkit-scrollbar-thumb {
+    background: #EC0B43;
+    border-radius: 9999px;
+}
+
+/* Show scrollbar on hover only */
+#carousel::-webkit-scrollbar {
+    display: none;
+}
+#carousel:hover::-webkit-scrollbar {
+    display: block;
+}
+
+
 /* Smooth transitions for all interactive elements */
 * {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced dark mode styles */
 .dark-card {
-    background: linear-gradient(145deg, #111111, #000000);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #111111, #000000);
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
-
 .dark-card:hover {
-    box-shadow: 0 12px 40px rgba(236, 11, 67, 0.2); /* accent glow on hover */
+  border-color: rgba(236, 11, 67, 0.4); /* visible accent */
 }
 
 /* Bottom Navigation for Mobile */
