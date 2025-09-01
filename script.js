@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.classList.toggle("bg-gray-900/80", window.scrollY > 50);
   });
 
+
   // ==============================
   // SECTION FADE / SLIDE ANIMATIONS
   // ==============================
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     observer.observe(el);
   });
+
 
   // ==============================
   // NAV HIGHLIGHT ON SCROLL (with data-active)
@@ -66,10 +68,10 @@ const sections = document.querySelectorAll("section[id]");
   activateLink();
 });
 
+
 // ==============================
 // CAROUSEL
 // ==============================
-
 const carousel = document.getElementById("carousel");
 
 carousel.addEventListener(
@@ -90,4 +92,3 @@ carousel.addEventListener(
   },
   { passive: false }
 );
-
