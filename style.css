@@ -56,27 +56,9 @@
     background: #f94f70;
 }
 
-
-/* --- More sleek look for the project carousel only --- */
-#carousel::-webkit-scrollbar {
-    height: 6px; /* thinner horizontal bar */
-}
-
-#carousel::-webkit-scrollbar-track {
-    background: transparent; /* makes it floaty */
-}
-
-#carousel::-webkit-scrollbar-thumb {
-    background: #EC0B43;
-    border-radius: 9999px;
-}
-
-/* Show scrollbar on hover only */
+/* Hide scrollbar for Project Carousel */
 #carousel::-webkit-scrollbar {
     display: none;
-}
-#carousel:hover::-webkit-scrollbar {
-    display: block;
 }
 
 
