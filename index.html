@@ -129,12 +129,95 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" data-animate class="min-h-screen flex items-center justify-center bg-black py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" data-animate class="min-h-screen flex items-center justify-center bg-black bg-particles py-16">
+        <!-- Particles -->
+        <div class="absolute inset-0">
+            <!-- Foreground Particles (bright & bigger, immersive) -->
+            <div class="particle fg z-20" style="top:18%; left:22%; animation-duration:20s; animation-delay:0s;"></div>
+            <div class="particle fg z-20" style="top:35%; left:68%; animation-duration:22s; animation-delay:2s;"></div>
+            <div class="particle fg z-20" style="top:60%; left:48%; animation-duration:24s; animation-delay:4s;"></div>
+            <div class="particle fg z-20" style="top:78%; left:18%; animation-duration:26s; animation-delay:6s;"></div>
+            <div class="particle fg z-20" style="top:50%; left:82%; animation-duration:28s; animation-delay:8s;"></div>
+
+            <!-- Mid-layer Particles (filling space with flow) --><!-- Particles -->
+            <div class="absolute inset-0">
+                <!-- Foreground Particles (bright & bigger, immersive) -->
+                <div class="particle fg z-20" style="top:18%; left:22%; animation-duration:20s; animation-delay:0s;">
+                </div>
+                <div class="particle fg z-20" style="top:35%; left:68%; animation-duration:22s; animation-delay:2s;">
+                </div>
+                <div class="particle fg z-20" style="top:60%; left:48%; animation-duration:24s; animation-delay:4s;">
+                </div>
+                <div class="particle fg z-20" style="top:78%; left:18%; animation-duration:26s; animation-delay:6s;">
+                </div>
+                <div class="particle fg z-20" style="top:50%; left:82%; animation-duration:28s; animation-delay:8s;">
+                </div>
+
+                <!-- Added near bottom-center for immersion -->
+                <div class="particle fg z-20" style="top:88%; left:45%; animation-duration:30s; animation-delay:5s;">
+                </div>
+                <div class="particle fg z-20" style="top:92%; left:55%; animation-duration:32s; animation-delay:7s;">
+                </div>
+
+                <!-- Mid-layer Particles (balanced scatter) -->
+                <div class="particle sm" style="top:12%; left:12%; animation-duration:16s; animation-delay:1s;"></div>
+                <div class="particle sm" style="top:28%; left:88%; animation-duration:14s; animation-delay:3s;"></div>
+                <div class="particle sm" style="top:52%; left:32%; animation-duration:18s; animation-delay:5s;"></div>
+                <div class="particle md" style="top:62%; left:72%; animation-duration:20s; animation-delay:7s;"></div>
+                <div class="particle md" style="top:76%; left:42%; animation-duration:22s; animation-delay:9s;"></div>
+                <div class="particle lg" style="top:32%; left:58%; animation-duration:26s; animation-delay:11s;"></div>
+                <div class="particle lg" style="top:82%; left:92%; animation-duration:28s; animation-delay:13s;"></div>
+                <div class="particle sm" style="top:45%; left:10%; animation-duration:18s; animation-delay:15s;"></div>
+                <div class="particle md" style="top:68%; left:28%; animation-duration:24s; animation-delay:17s;"></div>
+
+                <!-- Added mid-layer near buttons -->
+                <div class="particle sm" style="top:90%; left:40%; animation-duration:26s; animation-delay:9s;"></div>
+                <div class="particle sm" style="top:94%; left:60%; animation-duration:28s; animation-delay:11s;"></div>
+
+                <!-- Background Particles (tiny faint stars, atmosphere) -->
+                <div class="particle bg" style="top:6%; left:62%; animation-duration:30s; animation-delay:0s;"></div>
+                <div class="particle bg" style="top:22%; left:38%; animation-duration:34s; animation-delay:4s;"></div>
+                <div class="particle bg" style="top:48%; left:18%; animation-duration:38s; animation-delay:8s;"></div>
+                <div class="particle bg" style="top:72%; left:82%; animation-duration:32s; animation-delay:12s;"></div>
+                <div class="particle bg" style="top:92%; left:58%; animation-duration:36s; animation-delay:16s;"></div>
+                <div class="particle bg" style="top:14%; left:92%; animation-duration:40s; animation-delay:20s;"></div>
+                <div class="particle bg" style="top:40%; left:70%; animation-duration:42s; animation-delay:10s;"></div>
+                <div class="particle bg" style="top:80%; left:30%; animation-duration:44s; animation-delay:18s;"></div>
+                <div class="particle bg" style="top:96%; left:6%; animation-duration:38s; animation-delay:6s;"></div>
+                <div class="particle bg" style="top:4%; left:94%; animation-duration:42s; animation-delay:14s;"></div>
+                <div class="particle bg" style="top:8%; left:76%; animation-duration:40s; animation-delay:10s;"></div>
+            </div>
+
+            <div class="particle sm" style="top:12%; left:12%; animation-duration:16s; animation-delay:1s;"></div>
+            <div class="particle sm" style="top:28%; left:88%; animation-duration:14s; animation-delay:3s;"></div>
+            <div class="particle sm" style="top:52%; left:32%; animation-duration:18s; animation-delay:5s;"></div>
+            <div class="particle md" style="top:62%; left:72%; animation-duration:20s; animation-delay:7s;"></div>
+            <div class="particle md" style="top:76%; left:42%; animation-duration:22s; animation-delay:9s;"></div>
+            <div class="particle lg" style="top:32%; left:58%; animation-duration:26s; animation-delay:11s;"></div>
+            <div class="particle lg" style="top:82%; left:92%; animation-duration:28s; animation-delay:13s;"></div>
+            <div class="particle sm" style="top:45%; left:10%; animation-duration:18s; animation-delay:15s;"></div>
+            <div class="particle md" style="top:68%; left:28%; animation-duration:24s; animation-delay:17s;"></div>
+
+            <!-- Background Particles (tiny faint stars, atmosphere) -->
+            <div class="particle bg" style="top:6%; left:62%; animation-duration:30s; animation-delay:0s;"></div>
+            <div class="particle bg" style="top:22%; left:38%; animation-duration:34s; animation-delay:4s;"></div>
+            <div class="particle bg" style="top:48%; left:18%; animation-duration:38s; animation-delay:8s;"></div>
+            <div class="particle bg" style="top:72%; left:82%; animation-duration:32s; animation-delay:12s;"></div>
+            <div class="particle bg" style="top:92%; left:58%; animation-duration:36s; animation-delay:16s;"></div>
+            <div class="particle bg" style="top:14%; left:92%; animation-duration:40s; animation-delay:20s;"></div>
+            <div class="particle bg" style="top:40%; left:70%; animation-duration:42s; animation-delay:10s;"></div>
+            <div class="particle bg" style="top:80%; left:30%; animation-duration:44s; animation-delay:18s;"></div>
+
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-primary-400">About Me</h2>
+
             <div class="max-w-4xl mx-auto">
-                <div class="dark-card rounded-2xl p-8 md:p-12 shadow-xl ">
-                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+                <!-- Glassmorphism Card -->
+                <div class="rounded-2xl p-8 md:p-12 shadow-xl 
+                            bg-black/30 backdrop-blur-md border border-white/10">
+                    <div class="space-y-6 text-lg text-gray-200 leading-relaxed">
                         <p>
                             Currently pursuing a Bachelor's in Computer Engineering with a specialization in
                             <span class="text-primary-400 font-semibold">AI and Data Science</span> at LJ University.
@@ -154,26 +237,28 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Buttons -->
                 <div class="flex flex-col sm:flex-row gap-6 justify-center py-10">
                     <a href="mailto:devpanchal.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Dev,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
-                        class="bg-black hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-primary-500 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
+                        class="bg-black/40 backdrop-blur-sm hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-white/10 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
                         <i class="fas fa-envelope text-xl"></i>
                         <span class="font-semibold">Send Email</span>
                     </a>
                     <a href="https://linkedin.com/in/devpanchal" target="_blank"
-                        class="bg-black hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-primary-500 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
+                        class="bg-black/40 backdrop-blur-sm hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-white/10 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
                         <i class="fab fa-linkedin text-xl"></i>
                         <span class="font-semibold">LinkedIn</span>
                     </a>
                     <a href="https://github.com/devpanchal" target="_blank"
-                        class="bg-black hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-primary-500 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
+                        class="bg-black/40 backdrop-blur-sm hover:bg-primary-400 text-white hover:text-black px-8 py-4 rounded-xl border border-white/10 hover:border-primary-400 transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-400/30">
                         <i class="fab fa-github text-xl"></i>
                         <span class="font-semibold">GitHub</span>
                     </a>
                 </div>
-                </div>
             </div>
         </div>
+
     </section>
 
     <!-- Projects Section -->
