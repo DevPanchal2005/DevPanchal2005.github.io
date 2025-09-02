@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.classList.toggle("bg-gray-900/80", window.scrollY > 50);
   });
 
-
   // ==============================
   // SECTION FADE / SLIDE ANIMATIONS
   // ==============================
@@ -33,11 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 
-
   // ==============================
   // NAV HIGHLIGHT ON SCROLL (with data-active)
   // ==============================
-const sections = document.querySelectorAll("section[id]");
+  const sections = document.querySelectorAll("section[id]");
   const topNavLinks = document.querySelectorAll("#top-nav a");
   const bottomNavLinks = document.querySelectorAll("#bottom-nav a");
 
@@ -68,7 +66,6 @@ const sections = document.querySelectorAll("section[id]");
   activateLink();
 });
 
-
 // ==============================
 // CAROUSEL
 // ==============================
@@ -92,3 +89,32 @@ carousel.addEventListener(
   },
   { passive: false }
 );
+
+// ==============================
+// Education Accordion
+// ==============================
+// Education Semester Toggle
+// Education Semester Toggle
+const semesterBtns = document.querySelectorAll('.semester-btn:not(.disabled)');
+const semesterSkills = document.querySelectorAll('.semester-skills');
+
+semesterBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+        const semester = this.dataset.semester;
+
+        // Reset all
+        semesterBtns.forEach(b => b.classList.remove('active'));
+        semesterSkills.forEach(s => s.classList.remove('active'));
+
+        // Activate selected button
+        this.classList.add('active');
+
+        // Show only the matching semester's skills
+        const targetSkills = document.querySelector(`.semester-skills[data-semester="${semester}"]`);
+        if (targetSkills) {
+            targetSkills.classList.add('active');
+        }
+    });
+});
+
+

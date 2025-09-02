@@ -481,7 +481,8 @@
 
                 <!-- Supervised Learning -->
                 <div class="flex flex-col items-center group">
-                    <div class="w-24 h-24 rounded-xl flex items-center justify-center bg-white/5 backdrop-blur-md border border-white/10 transition-all duration-300 group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-md group-hover:shadow-white/10 group-hover:backdrop-blur-lg">
+                    <div
+                        class="w-24 h-24 rounded-xl flex items-center justify-center bg-white/5 backdrop-blur-md border border-white/10 transition-all duration-300 group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-md group-hover:shadow-white/10 group-hover:backdrop-blur-lg">
                         <img src="assets/logo/supervised_learning.png" alt="Supervised ML"
                             class="w-16 h-16 object-contain">
                     </div>
@@ -510,7 +511,8 @@
                             class="w-14 h-14 object-contain">
                     </div>
                     <span
-                        class="text-sm text-gray-400 mt-2 font-medium text-gray-400 whitespace-nowrap scale-95">Reinforcement Learning</span>
+                        class="text-sm text-gray-400 mt-2 group-hover:text-primary-400 font-medium text-gray-400 whitespace-nowrap scale-95">Reinforcement
+                        Learning</span>
                 </div>
 
                 <!-- Deep Learning -->
@@ -671,105 +673,125 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" data-animate class="min-h-screen flex items-center justify-center bg-black py-16">
+    <!-- Education -->
+    <section id="education" class="min-h-screen flex items-center justify-center bg-black py-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-primary-400">Education</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-800 mb-12">
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-bold text-white mb-2">Bachelor's in Computer Engineering</h3>
-                        <p class="text-lg text-primary-400 mb-1">AI and Data Science Specialization</p>
-                        <p class="text-gray-500">LJ University</p>
+
+            <!-- Card -->
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 shadow-xl">
+
+                <!-- Course Info -->
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-100">Bachelor's of Engineering in AI & Data Science</h3>
+                    <p class="text-gray-400">LJ University</p>
+                </div>
+
+                <!-- Semester Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 hover:border-primary-400 hover:text-primary-400 transition-all duration-300 semester-btn active"
+                        data-semester="1">Semester
+                        1</button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 hover:border-primary-400 hover:text-primary-400 transition-all duration-300 semester-btn"
+                        data-semester="2">Semester
+                        2</button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 hover:border-primary-400 hover:text-primary-400 transition-all duration-300 semester-btn"
+                        data-semester="3">Semester
+                        3</button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 hover:border-primary-400 hover:text-primary-400 transition-all duration-300 semester-btn"
+                        data-semester="4">Semester
+                        4</button>
+                </div>
+
+                <!-- Semester 1 -->
+                <div class="semester-skills" data-semester="1">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Core
+                            Java</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Software
+                            Engineering</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Mathematics
+                            - I</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Physics</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">IoT</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Computer
+                            Hardware</span>
+                    </div>
+                </div>
+                
+                <!-- Semester 2 -->
+                <div class="semester-skills hidden" data-semester="2">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Advanced
+                            Java</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">PostgreSQL</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">MySQL</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Data
+                            Structures</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Mathematics
+                            - II</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Electronics</span>
+                    </div>
+                </div>
+                
+                <!-- Semester 3 -->
+                <div class="semester-skills hidden" data-semester="3">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Python</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Full
+                            Stack Development</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Probability
+                            and Stochastic Processes</span>
+                    </div>
+                </div>
+                
+                <!-- Semester 4 -->
+                <div class="semester-skills hidden" data-semester="4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Advanced
+                            Python</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Supervised
+                            ML</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">MERN
+                            Stack</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Theory
+                            of Computation</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Computer
+                            Architecture</span>
+                        <span
+                            class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-gray-300 text-sm hover:border-primary-400 hover:text-primary-400 transition-all duration-300">Discrete
+                            Mathematics</span>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Semester 1 -->
-                    <div
-                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
-                        <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 1</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li class="flex items-center"><i class="fas fa-check text-primary-400 mr-2 text-sm"></i>Core
-                                Java</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Software Engineering</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Mathematics - I</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Physics</li>
-                            <li class="flex items-center"><i class="fas fa-check text-primary-400 mr-2 text-sm"></i>IoT
-                            </li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Computer Hardware</li>
-                        </ul>
-                    </div>
-
-                    <!-- Semester 2 -->
-                    <div
-                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
-                        <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 2</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Advanced Java</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>PostgreSQL</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>MySQL</li>
-                            <li class="flex items-center"><i class="fas fa-check text-primary-400 mr-2 text-sm"></i>Data
-                                Structures</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Mathematics - II</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Electronics</li>
-                        </ul>
-                    </div>
-
-                    <!-- Semester 3 -->
-                    <div
-                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
-                        <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 3</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Python</li>
-                            <li class="flex items-center"><i class="fas fa-check text-primary-400 mr-2 text-sm"></i>Full
-                                Stack Development</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Probability and Stochastic
-                                Processes</li>
-                        </ul>
-                    </div>
-
-                    <!-- Semester 4 -->
-                    <div
-                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-primary-400/50 transition-all duration-300">
-                        <h4 class="text-lg font-semibold mb-4 text-primary-400">Semester 4</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Advanced Python</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Supervised ML</li>
-                            <li class="flex items-center"><i class="fas fa-check text-primary-400 mr-2 text-sm"></i>MERN
-                                Stack</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Theory of Computation</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Computer Architecture</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-primary-400 mr-2 text-sm"></i>Discrete Mathematics</li>
-                        </ul>
-                    </div>
-
-                    <!-- Upcoming Semesters -->
-                    <div
-                        class="bg-gray-900 rounded-xl p-6 border border-gray-800 opacity-50 md:col-span-2 lg:col-span-1">
-                        <h4 class="text-lg font-semibold mb-4 text-gray-500">Semester 5-8</h4>
-                        <p class="text-gray-600 text-center py-8">Upcoming Semesters</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-black border-t border-gray-900 py-8">
