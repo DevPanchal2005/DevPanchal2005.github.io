@@ -94,27 +94,40 @@ carousel.addEventListener(
 // Education Accordion
 // ==============================
 // Education Semester Toggle
-// Education Semester Toggle
-const semesterBtns = document.querySelectorAll('.semester-btn:not(.disabled)');
+const semesterBtns = document.querySelectorAll('.semester-btn:not([disabled])');
 const semesterSkills = document.querySelectorAll('.semester-skills');
 
 semesterBtns.forEach(btn => {
-    btn.addEventListener('click', function () {
-        const semester = this.dataset.semester;
+  btn.addEventListener('click', function () {
+    const semester = this.dataset.semester;
 
-        // Reset all
-        semesterBtns.forEach(b => b.classList.remove('active'));
-        semesterSkills.forEach(s => s.classList.remove('active'));
-
-        // Activate selected button
-        this.classList.add('active');
-
-        // Show only the matching semester's skills
-        const targetSkills = document.querySelector(`.semester-skills[data-semester="${semester}"]`);
-        if (targetSkills) {
-            targetSkills.classList.add('active');
-        }
+    // Reset all buttons
+    semesterBtns.forEach(b => {
+      b.classList.remove(
+        'active',
+        'bg-white/10',
+        'border-primary-400',
+        'text-primary-400',
+        'shadow-lg'
+      );
+      b.classList.add("bg-black/30", "border-white/20", "text-white");
     });
+
+    // Reset skills
+    semesterSkills.forEach(s => s.classList.remove('active'));
+
+    // Activate selected button
+    this.classList.add('active', 'bg-white/10', 'border-primary-400', 'shadow-lg');
+    this.classList.remove("bg-black/30", "text-white");
+    this.classList.add('text-primary-400');
+
+    // Show only the matching semester's skills
+    const targetSkills = document.querySelector(`.semester-skills[data-semester="${semester}"]`);
+    if (targetSkills) {
+      targetSkills.classList.add('active');
+    }
+  });
 });
+
 
 
