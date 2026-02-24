@@ -1,90 +1,88 @@
 /* Additional custom styles to complement Tailwind */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Custom animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-    from { 
-        opacity: 0; 
-        transform: translateY(30px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
 .animate-slide-up {
-    animation: slideUp 0.6s ease-out;
+  animation: slideUp 0.6s ease-out;
 }
 
 .animate-float {
-    animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 /* Base scrollbar (vertical) */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px; /* horizontal bar thickness */
+  width: 8px;
+  height: 8px; /* horizontal bar thickness */
 }
 
 ::-webkit-scrollbar-track {
-    background: #000000;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #EC0B43;
-    border-radius: 9999px; /* pill shaped */
+  background: #ec0b43;
+  border-radius: 9999px; /* pill shaped */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #f94f70;
+  background: #f94f70;
 }
 
 /* Hide scrollbar for Project Carousel */
 #carousel::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 
 /* Smooth transitions for all interactive elements */
 * {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dark-card {
-  background: linear-gradient(145deg, #111111, #000000);
-  border: 1px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.dark-card:hover {
-  border-color: rgba(236, 11, 67, 0.4); /* visible accent */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Bottom Navigation for Mobile */
 .md\:hidden .overflow-x-auto {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .md\:hidden .overflow-x-auto::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 /* Animated Gradient Background for About Section */
@@ -150,7 +148,10 @@
   }
 }
 
-
 /* Show/hide semester-specific skills */
-.semester-skills { display: none; }
-.semester-skills.active { display: block; }
+.semester-skills {
+  display: none;
+}
+.semester-skills.active {
+  display: block;
+}

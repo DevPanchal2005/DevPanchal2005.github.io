@@ -104,22 +104,37 @@ semesterBtns.forEach(btn => {
     // Reset all buttons
     semesterBtns.forEach(b => {
       b.classList.remove(
-        'active',
-        'bg-white/10',
-        'border-primary-400',
-        'text-primary-400',
-        'shadow-lg'
+        "active",
+        "text-black",
+        "bg-primary-400",
+        "border-primary-400"
       );
-      b.classList.add("bg-black/30", "border-white/20", "text-white");
+      b.classList.add(
+        "bg-black/30",
+        "text-white",
+        "border-white/10",
+        "hover:border-primary-400",
+        "hover:text-primary-400",
+        "hover:bg-white/10",
+      );
     });
 
     // Reset skills
     semesterSkills.forEach(s => s.classList.remove('active'));
 
     // Activate selected button
-    this.classList.add('active', 'bg-white/10', 'border-primary-400', 'shadow-lg');
-    this.classList.remove("bg-black/30", "text-white");
-    this.classList.add('text-primary-400');
+    this.classList.add(
+      "active",
+      "text-black",
+      "bg-primary-400"
+    );
+    this.classList.remove(
+      "bg-black/30",
+      "text-white",
+      "hover:border-primary-400",
+      "hover:text-primary-400",
+      "hover:bg-white/10"
+    );
 
     // Show only the matching semester's skills
     const targetSkills = document.querySelector(`.semester-skills[data-semester="${semester}"]`);
