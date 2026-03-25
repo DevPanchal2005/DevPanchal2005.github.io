@@ -145,13 +145,23 @@ semesterBtns.forEach((btn) => {
 // ==============================
 // CUSTOM CURSOR
 // ==============================
-const cursor = document.getElementById("cursor");
 const trail = document.getElementById("cursor-trail");
 
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let angle = 0;
+
 document.addEventListener("mousemove", (e) => {
-  cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
-  trail.style.transform = `translate(${e.clientX - 18}px, ${e.clientY - 18}px)`;
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
 
-document.addEventListener("mousedown", () => (cursor.style.scale = "0.7"));
-document.addEventListener("mouseup", () => (cursor.style.scale = "1"));
+function animate() {
+  angle += 0.02;
+  const x = mouseX + Math.cos(angle) * 200;
+  const y = mouseY + Math.sin(angle) * 200;
+  trail.style.left = x - 5 + "px";
+  trail.style.top = y - 5 + "px";
+  requestAnimationFrame(animate);
+}
+animate();
