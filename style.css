@@ -155,3 +155,33 @@
 .semester-skills.active {
   display: block;
 }
+
+* { cursor: none; }
+
+#cursor {
+  width: 12px;
+  height: 12px;
+  background: #f94f70;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 0 10px 3px rgba(249, 79, 112, 0.5);
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+#cursor-trail {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(249, 79, 112, 0.6);
+  background: rgba(249, 79, 112, 0.05);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}

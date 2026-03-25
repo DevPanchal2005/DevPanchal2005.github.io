@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 },
   );
 
   document.querySelectorAll("[data-animate]").forEach((el) => {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "opacity-0",
       "translate-y-6",
       "transition-all",
-      "duration-700"
+      "duration-700",
     );
     observer.observe(el);
   });
@@ -87,27 +87,27 @@ carousel.addEventListener(
       });
     }
   },
-  { passive: false }
+  { passive: false },
 );
 
 // ==============================
 // Education Accordion
 // ==============================
 // Education Semester Toggle
-const semesterBtns = document.querySelectorAll('.semester-btn:not([disabled])');
-const semesterSkills = document.querySelectorAll('.semester-skills');
+const semesterBtns = document.querySelectorAll(".semester-btn:not([disabled])");
+const semesterSkills = document.querySelectorAll(".semester-skills");
 
-semesterBtns.forEach(btn => {
-  btn.addEventListener('click', function () {
+semesterBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
     const semester = this.dataset.semester;
 
     // Reset all buttons
-    semesterBtns.forEach(b => {
+    semesterBtns.forEach((b) => {
       b.classList.remove(
         "active",
         "text-black",
         "bg-primary-400",
-        "border-primary-400"
+        "border-primary-400",
       );
       b.classList.add(
         "bg-black/30",
@@ -120,29 +120,38 @@ semesterBtns.forEach(btn => {
     });
 
     // Reset skills
-    semesterSkills.forEach(s => s.classList.remove('active'));
+    semesterSkills.forEach((s) => s.classList.remove("active"));
 
     // Activate selected button
-    this.classList.add(
-      "active",
-      "text-black",
-      "bg-primary-400"
-    );
+    this.classList.add("active", "text-black", "bg-primary-400");
     this.classList.remove(
       "bg-black/30",
       "text-white",
       "hover:border-primary-400",
       "hover:text-primary-400",
-      "hover:bg-white/10"
+      "hover:bg-white/10",
     );
 
     // Show only the matching semester's skills
-    const targetSkills = document.querySelector(`.semester-skills[data-semester="${semester}"]`);
+    const targetSkills = document.querySelector(
+      `.semester-skills[data-semester="${semester}"]`,
+    );
     if (targetSkills) {
-      targetSkills.classList.add('active');
+      targetSkills.classList.add("active");
     }
   });
 });
 
+// ==============================
+// CUSTOM CURSOR
+// ==============================
+const cursor = document.getElementById("cursor");
+const trail = document.getElementById("cursor-trail");
 
+document.addEventListener("mousemove", (e) => {
+  cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
+  trail.style.transform = `translate(${e.clientX - 18}px, ${e.clientY - 18}px)`;
+});
 
+document.addEventListener("mousedown", () => (cursor.style.scale = "0.7"));
+document.addEventListener("mouseup", () => (cursor.style.scale = "1"));
