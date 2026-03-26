@@ -165,3 +165,28 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+// ==============================
+// LOCAL TIME (Minimal + Clean)
+// ==============================
+function updateTime() {
+  const now = new Date();
+
+  const timeString = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  });
+
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  let shortTZ = "";
+  if (timezone === "Asia/Kolkata") shortTZ = "IST";
+  else shortTZ = timezone.split("/")[1] || timezone;
+
+  document.getElementById("local-time").textContent = timeString;
+  document.getElementById("timezone").textContent = shortTZ;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
