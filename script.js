@@ -1,13 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ==============================
-  // NAVBAR BACKGROUND ON SCROLL
-  // ==============================
-  const navbar = document.getElementById("navbar");
-  window.addEventListener("scroll", () => {
-    navbar.classList.toggle("bg-gray-900/80", window.scrollY > 50);
-  });
-
-  // ==============================
   // SECTION FADE / SLIDE ANIMATIONS
   // ==============================
   const observer = new IntersectionObserver(
@@ -143,50 +135,24 @@ semesterBtns.forEach((btn) => {
 });
 
 // ==============================
-// CUSTOM CURSOR
+// LOCAL TIME (Optimized)
 // ==============================
-const trail = document.getElementById("cursor-trail");
+document.addEventListener("DOMContentLoaded", () => {
+  function updateTime() {
+    const now = new Date();
 
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
-let angle = 0;
+    const timeString = now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
 
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
+    const timeEl = document.getElementById("local-time");
+    if (timeEl) {
+      timeEl.textContent = timeString;
+    }
+  }
 
-function animate() {
-  angle += 0.02;
-  const x = mouseX + Math.cos(angle) * 200;
-  const y = mouseY + Math.sin(angle) * 200;
-  trail.style.left = x - 5 + "px";
-  trail.style.top = y - 5 + "px";
-  requestAnimationFrame(animate);
-}
-animate();
-
-// ==============================
-// LOCAL TIME (Minimal + Clean)
-// ==============================
-function updateTime() {
-  const now = new Date();
-
-  const timeString = now.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-  });
-
-  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-  let shortTZ = "";
-  if (timezone === "Asia/Kolkata") shortTZ = "IST";
-  else shortTZ = timezone.split("/")[1] || timezone;
-
-  document.getElementById("local-time").textContent = timeString;
-  document.getElementById("timezone").textContent = shortTZ;
-}
-
-setInterval(updateTime, 1000);
-updateTime();
+  updateTime();
+  setInterval(updateTime, 1000);
+})
