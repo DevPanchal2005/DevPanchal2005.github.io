@@ -85,68 +85,6 @@
   display: none; /* Chrome, Safari, and Opera */
 }
 
-/* Animated Gradient Background for About Section */
-/* Floating particle (tiny glowing dots) */
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(236, 11, 67, 0.4); /* accent pink glow */
-  box-shadow: 0 0 12px rgba(236, 11, 67, 0.6);
-  animation: particle-float ease-in-out infinite;
-}
-
-/* Foreground = bright, bigger glow */
-.particle.fg {
-  width: 10px;
-  height: 10px;
-  background: rgba(236, 72, 153, 0.9);
-  filter: blur(2px);
-}
-
-/* Mid layer = your default sm/md/lg */
-.particle.sm {
-  width: 6px;
-  height: 6px;
-  filter: blur(1px);
-}
-
-.particle.md {
-  width: 10px;
-  height: 10px;
-  filter: blur(2px);
-}
-
-.particle.lg {
-  width: 16px;
-  height: 16px;
-  filter: blur(3px);
-}
-
-/* Background = faint, tiny specks */
-.particle.bg {
-  width: 3px;
-  height: 3px;
-  background: rgba(236, 72, 153, 0.2);
-  filter: blur(1px);
-}
-
-@keyframes particle-float {
-  0% {
-    transform: translateY(0) translateX(0) scale(1);
-  }
-  25% {
-    transform: translateY(-40px) translateX(25px) scale(1.1);
-  }
-  50% {
-    transform: translateY(-80px) translateX(-20px) scale(0.9);
-  }
-  75% {
-    transform: translateY(-40px) translateX(15px) scale(1.05);
-  }
-  100% {
-    transform: translateY(0) translateX(0) scale(1);
-  }
-}
 
 /* Show/hide semester-specific skills */
 .semester-skills {
@@ -155,25 +93,3 @@
 .semester-skills.active {
   display: block;
 }
-
-#cursor-trail {
-  width: 10px;
-  height: 10px;
-  background: #f94f70;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 99998;
-  top: 0;
-  left: 0;
-  box-shadow: 0 0 8px 3px rgba(249, 79, 112, 0.5);
-
-  animation: trailBlink 1.2s ease-in-out infinite;
-
-
-}
-@keyframes trailBlink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.2; }
-}
-
