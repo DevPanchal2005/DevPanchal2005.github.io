@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Panchal - Data Scientist & Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -387,21 +388,23 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-300">
-                
-                    <<a href="#" target="_blank" class="relative group block w-full h-[350px] overflow-hidden rounded-xl">
-                
+                <div
+                    class="border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-300">
+
+                    <<a href="#" target="_blank"
+                        class="relative group block w-full h-[350px] overflow-hidden rounded-xl">
+
                         <!-- Image -->
                         <img src="assets/projects/PredictGrad.png"
                             class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
-                
+
                         <!-- Gradient Overlay (bottom → top fade) -->
                         <div class="absolute inset-0 
                               bg-gradient-to-t from-black/70 via-black/30 to-transparent
                               opacity-0 group-hover:opacity-100
                               transition duration-500">
                         </div>
-                
+
                         <!-- Directional Hover Layer (slight slide effect) -->
                         <div class="absolute inset-0 
                               bg-black/40 
@@ -409,36 +412,36 @@
                               opacity-0 group-hover:opacity-100
                               transition-all duration-500">
                         </div>
-                
+
                         <!-- Center Icon -->
                         <div class="absolute inset-0 flex items-center justify-center 
                               opacity-0 group-hover:opacity-100 
                               scale-75 group-hover:scale-100
                               transition-all duration-500">
-                
+
                             <i class="fas fa-arrow-up-right-from-square text-white text-4xl"></i>
-                
+
                         </div>
-                
+
                         </a>
-                
+
                         <div class="p-8">
                             <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
                                 <h3 class="text-2xl font-semibold text-white">
                                     Attendance for Impact
                                 </h3>
-                
+
                                 <div class="flex gap-4 text-sm">
                                     <a href="#" class="text-primary-400 hover:underline">Live</a>
                                     <a href="#" class="text-gray-400 hover:text-primary-400">GitHub</a>
                                 </div>
                             </div>
-                
+
                             <p class="text-gray-400 mb-4">
                                 Data analysis system that evaluates relationships between attendance and academic
                                 performance.
                             </p>
-                
+
                             <ul class="list-disc pl-5 space-y-2 text-gray-500 text-sm">
                                 <li>Performed statistical analysis (skewness, IQR, std deviation)</li>
                                 <li>Built interactive dashboards using Streamlit</li>
@@ -452,7 +455,6 @@
     </section>
 
     <!-- Skills Section -->
-    <!-- Skills Section (Redesigned) -->
     <section id="skills" class="min-h-screen flex items-center justify-center py-20 bg-black">
         <div class="max-w-7xl w-full px-6">
 
@@ -466,63 +468,83 @@
 
                 <!-- Data Analysis -->
                 <div>
-                    <h3 class="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">
+                    <h3 class="text-lg font-semibold text-white mb-0">
                         Data Analysis
                     </h3>
-                    <ul class="space-y-3 text-gray-400 ">
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">NumPy</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Data Cleaning</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Pandas</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">EDA</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Feature Engineering
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Machine Learning -->
-                <div>
-                    <h3 class="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">
-                        Machine Learning
-                    </h3>
+                    <div class="relative h-px mb-4 mt-2">
+                        <div class="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent"></div>
+                    </div>
                     <ul class="space-y-3 text-gray-400">
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Scikit-Learn</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Supervised Learning
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Exploratory Data
+                            Analysis</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Hypothesis Testing
                         </li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Unsupervised Learning
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">A/B Testing</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Time Series Analysis
                         </li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Model Evaluation</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Hyperparameter Tuning
-                        </li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">ETL Pipelines</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Web Scraping</li>
                     </ul>
                 </div>
 
                 <!-- Data Visualization -->
                 <div>
-                    <h3 class="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">
+                    <h3 class="text-lg font-semibold text-white mb-0">
                         Data Visualization
                     </h3>
+                    <div class="relative h-px mb-4 mt-2">
+                        <div class="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent"></div>
+                    </div>
                     <ul class="space-y-3 text-gray-400">
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Matplotlib</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Seaborn</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Power BI</li>
                         <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Dashboard Design</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Storytelling with Data
-                        </li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Storytelling with Data</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Chart Selection & Design</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Interactive Reporting</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Power BI</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Plotly & Streamlit Apps</li>
                     </ul>
                 </div>
 
-                <!-- Tools & Technologies -->
+                <!-- Databases & Tools -->
                 <div>
-                    <h3 class="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">
-                        Tools & Technologies
+                    <h3 class="text-lg font-semibold text-white mb-0">
+                        Databases & Tools
                     </h3>
+                    <div class="relative h-px mb-4 mt-2">
+                        <div class="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent"></div>
+                    </div>
                     <ul class="space-y-3 text-gray-400">
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Python</li>
                         <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">SQL (MySQL,
                             PostgreSQL)</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Excel</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Excel & Google Sheets
+                        </li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Python</li>
                         <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Streamlit</li>
                         <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Git & GitHub</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Jupyter Notebook</li>
+                    </ul>
+                </div>
+
+                <!-- Reporting & Business -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-0">
+                        Reporting & Business
+                    </h3>
+                    <div class="relative h-px mb-4 mt-2">
+                        <div class="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent"></div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">KPI Tracking</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Business Metrics
+                            Design</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Stakeholder Reporting
+                        </li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Automated Reporting
+                        </li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Data-Driven Decisions
+                        </li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Root Cause Analysis
+                        </li>
                     </ul>
                 </div>
 

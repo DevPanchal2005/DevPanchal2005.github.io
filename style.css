@@ -41,23 +41,25 @@
   animation: float 6s ease-in-out infinite;
 }
 
-/* Base scrollbar (vertical) */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px; /* horizontal bar thickness */
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #ec0b43;
-  border-radius: 9999px; /* pill shaped */
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #f94f70;
+  background-clip: padding-box;
 }
 
 /* Smooth transitions for all interactive elements */
