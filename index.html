@@ -259,195 +259,195 @@
 
                 <!-- Project 1 -->
                 <div
-                    class="border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-300">
+                    class="group border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-500">
 
                     <!-- Image -->
-                    <a href="#" target="_blank"
-                        class="relative group block w-full h-[350px] overflow-hidden rounded-xl">
-
-                        <!-- Image -->
+                    <a href="https://thepredictgrad.streamlit.app" target="_blank"
+                        class="relative block w-full h-[350px] overflow-hidden">
                         <img src="assets/projects/PredictGrad.png"
-                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
-
-                        <!-- Gradient Overlay (bottom → top fade) -->
-                        <div class="absolute inset-0 
-                                  bg-gradient-to-t from-black/70 via-black/30 to-transparent
-                                  opacity-0 group-hover:opacity-100
-                                  transition duration-500">
+                            class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
                         </div>
-
-                        <!-- Directional Hover Layer (slight slide effect) -->
-                        <div class="absolute inset-0 
-                                  bg-black/40 
-                                  translate-y-4 group-hover:translate-y-0
-                                  opacity-0 group-hover:opacity-100
-                                  transition-all duration-500">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
+                            <div class="w-14 h-14 rounded-full bg-primary-400 flex items-center justify-center">
+                                <i class="fas fa-arrow-up-right-from-square text-black text-lg"></i>
+                            </div>
                         </div>
-
-                        <!-- Center Icon -->
-                        <div class="absolute inset-0 flex items-center justify-center 
-                                  opacity-0 group-hover:opacity-100 
-                                  scale-75 group-hover:scale-100
-                                  transition-all duration-500">
-
-
-                            <i class="fas fa-arrow-up-right-from-square text-white text-4xl"></i>
-
-
-                        </div>
-
                     </a>
 
                     <!-- Content -->
                     <div class="p-8">
-                        <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
-                            <h3 class="text-2xl font-semibold text-white">
-                                Sorting Visualizer
-                            </h3>
-
+                        <div class="flex justify-between items-start flex-wrap gap-4 mb-3">
+                            <h3 class="text-2xl font-semibold text-white">PredictGrad</h3>
                             <div class="flex gap-4 text-sm">
-                                <a href="#" class="text-primary-400 hover:underline">Live</a>
-                                <a href="#" class="text-gray-400 hover:text-primary-400">GitHub</a>
+                                <a href="https://thepredictgrad.streamlit.app" target="_blank"
+                                    class="text-primary-400 hover:underline">Live
+                                    ↗</a>
+                                <a href="#" class="text-gray-400 hover:text-primary-400">GitHub ↗</a>
                             </div>
                         </div>
 
-                        <p class="text-gray-400 mb-4">
-                            Interactive visualization tool demonstrating sorting algorithms step-by-step
-                            with smooth animations to enhance conceptual understanding.
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            End-to-end ML pipeline predicting academic risk for 905 engineering students. Forecasts Sem
+                            3 subject marks and
+                            classifies students likely to drop 10+ percentile points, deployed as an interactive
+                            Streamlit app.
                         </p>
 
-                        <ul class="list-disc pl-5 space-y-2 text-gray-500 text-sm">
-                            <li>Implemented Bubble, Merge, Quick, Insertion, and Selection sort visualizations</li>
-                            <li>Built smooth animations using Framer Motion</li>
-                            <li>Designed intuitive UI for algorithm comparison</li>
-                        </ul>
+                        <div class="space-y-2 mb-6">
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span> Built 4
+                                independent regression models (56 pipelines each) using Voting Regressor with
+                                BayesSearchCV & achieving MAE
+                                as low as 5.71</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span> Designed
+                                risk classification using a StackingClassifier (CatBoost + LGBM + ExtraTrees) with
+                                Boruta feature selection
+                                and threshold tuning → Recall 0.66 on imbalanced data</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span>
+                                Engineered
+                                percentile-based risk flag from predicted marks as classification target, strictly using
+                                Sem 1 and 2 data to prevent
+                                leakage
+                            </p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span> Delivered
+                                SHAP-powered explainability and EDA dashboards inside the deployed app</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Python</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Scikit-Learn</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">CatBoost</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">LightGBM</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">SHAP</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Streamlit</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">BayesSearchCV</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div
-                    class="border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-300">
+                    class="group border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-500">
 
-                    <<a href="#" target="_blank"
-                        class="relative group block w-full h-[350px] overflow-hidden rounded-xl">
-
-                        <!-- Image -->
+                    <!-- Image -->
+                    <a href="#" target="_blank" class="relative block w-full h-[350px] overflow-hidden">
                         <img src="assets/projects/PredictGrad.png"
-                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
-
-                        <!-- Gradient Overlay (bottom → top fade) -->
-                        <div class="absolute inset-0 
-              bg-gradient-to-t from-black/70 via-black/30 to-transparent
-              opacity-0 group-hover:opacity-100
-              transition duration-500">
+                            class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
                         </div>
-
-                        <!-- Directional Hover Layer (slight slide effect) -->
-                        <div class="absolute inset-0 
-              bg-black/40 
-              translate-y-4 group-hover:translate-y-0
-              opacity-0 group-hover:opacity-100
-              transition-all duration-500">
-                        </div>
-
-                        <!-- Center Icon -->
-                        <div class="absolute inset-0 flex items-center justify-center 
-              opacity-0 group-hover:opacity-100 
-              scale-75 group-hover:scale-100
-              transition-all duration-500">
-
-                            <i class="fas fa-arrow-up-right-from-square text-white text-4xl"></i>
-
-                        </div>
-
-                        </a>
-
-                        <div class="p-8">
-                            <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
-                                <h3 class="text-2xl font-semibold text-white">
-                                    Attendance for Impact
-                                </h3>
-
-                                <div class="flex gap-4 text-sm">
-                                    <a href="#" class="text-primary-400 hover:underline">Live</a>
-                                    <a href="#" class="text-gray-400 hover:text-primary-400">GitHub</a>
-                                </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
+                            <div class="w-14 h-14 rounded-full bg-primary-400 flex items-center justify-center">
+                                <i class="fas fa-arrow-up-right-from-square text-black text-lg"></i>
                             </div>
-
-                            <p class="text-gray-400 mb-4">
-                                Data analysis system that evaluates relationships between attendance and academic
-                                performance.
-                            </p>
-
-                            <ul class="list-disc pl-5 space-y-2 text-gray-500 text-sm">
-                                <li>Performed statistical analysis (skewness, IQR, std deviation)</li>
-                                <li>Built interactive dashboards using Streamlit</li>
-                                <li>Generated insights and personalized recommendations</li>
-                            </ul>
                         </div>
+                    </a>
+
+                    <!-- Content -->
+                    <div class="p-8">
+                        <div class="flex justify-between items-start flex-wrap gap-4 mb-3">
+                            <h3 class="text-2xl font-semibold text-white">PredictGrad</h3>
+                            <div class="flex gap-4 text-sm">
+                                <a href="#" class="text-primary-400 hover:underline">Live ↗</a>
+                                <a href="#" class="text-gray-400 hover:text-primary-400">GitHub ↗</a>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Academic risk prediction system for engineering students that detects performance decline
+                            before it happens.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span>
+                                Analyzed semester-wise student data to forecast Sem 3 outcomes</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span> Built
+                                risk classification model flagging students with 10%+ percentile drop</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span>
+                                Deployed interactive Streamlit app with prediction and analysis modules</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Python</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Pandas</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Scikit-Learn</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Streamlit</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div
-                    class="border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-300">
+                    class="group border border-white/10 rounded-2xl overflow-hidden hover:border-primary-400 transition-all duration-500">
 
-                    <<a href="#" target="_blank"
-                        class="relative group block w-full h-[350px] overflow-hidden rounded-xl">
-
-                        <!-- Image -->
+                    <!-- Image -->
+                    <a href="#" target="_blank" class="relative block w-full h-[350px] overflow-hidden">
                         <img src="assets/projects/PredictGrad.png"
-                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
-
-                        <!-- Gradient Overlay (bottom → top fade) -->
-                        <div class="absolute inset-0 
-                              bg-gradient-to-t from-black/70 via-black/30 to-transparent
-                              opacity-0 group-hover:opacity-100
-                              transition duration-500">
+                            class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
                         </div>
-
-                        <!-- Directional Hover Layer (slight slide effect) -->
-                        <div class="absolute inset-0 
-                              bg-black/40 
-                              translate-y-4 group-hover:translate-y-0
-                              opacity-0 group-hover:opacity-100
-                              transition-all duration-500">
-                        </div>
-
-                        <!-- Center Icon -->
-                        <div class="absolute inset-0 flex items-center justify-center 
-                              opacity-0 group-hover:opacity-100 
-                              scale-75 group-hover:scale-100
-                              transition-all duration-500">
-
-                            <i class="fas fa-arrow-up-right-from-square text-white text-4xl"></i>
-
-                        </div>
-
-                        </a>
-
-                        <div class="p-8">
-                            <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
-                                <h3 class="text-2xl font-semibold text-white">
-                                    Attendance for Impact
-                                </h3>
-
-                                <div class="flex gap-4 text-sm">
-                                    <a href="#" class="text-primary-400 hover:underline">Live</a>
-                                    <a href="#" class="text-gray-400 hover:text-primary-400">GitHub</a>
-                                </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
+                            <div class="w-14 h-14 rounded-full bg-primary-400 flex items-center justify-center">
+                                <i class="fas fa-arrow-up-right-from-square text-black text-lg"></i>
                             </div>
-
-                            <p class="text-gray-400 mb-4">
-                                Data analysis system that evaluates relationships between attendance and academic
-                                performance.
-                            </p>
-
-                            <ul class="list-disc pl-5 space-y-2 text-gray-500 text-sm">
-                                <li>Performed statistical analysis (skewness, IQR, std deviation)</li>
-                                <li>Built interactive dashboards using Streamlit</li>
-                                <li>Generated insights and personalized recommendations</li>
-                            </ul>
                         </div>
+                    </a>
+
+                    <!-- Content -->
+                    <div class="p-8">
+                        <div class="flex justify-between items-start flex-wrap gap-4 mb-3">
+                            <h3 class="text-2xl font-semibold text-white">PredictGrad</h3>
+                            <div class="flex gap-4 text-sm">
+                                <a href="#" class="text-primary-400 hover:underline">Live ↗</a>
+                                <a href="#" class="text-gray-400 hover:text-primary-400">GitHub ↗</a>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Academic risk prediction system for engineering students that detects performance decline
+                            before it happens.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span>
+                                Analyzed semester-wise student data to forecast Sem 3 outcomes</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span> Built
+                                risk classification model flagging students with 10%+ percentile drop</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
+                                    class="text-primary-400 mt-0.5">→</span>
+                                Deployed interactive Streamlit app with prediction and analysis modules</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Python</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Pandas</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Scikit-Learn</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Streamlit</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -497,11 +497,15 @@
                     </div>
                     <ul class="space-y-3 text-gray-400">
                         <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Dashboard Design</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Storytelling with Data</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Chart Selection & Design</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Interactive Reporting</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Storytelling with Data
+                        </li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Chart Selection &
+                            Design</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Interactive Reporting
+                        </li>
                         <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Power BI</li>
-                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Plotly & Streamlit Apps</li>
+                        <li class="hover:text-primary-400 hover:pl-2 transition-all duration-200">Plotly & Streamlit
+                            Apps</li>
                     </ul>
                 </div>
 
