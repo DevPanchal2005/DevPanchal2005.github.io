@@ -344,7 +344,7 @@
 
                     <!-- Image -->
                     <a href="#" target="_blank" class="relative block w-full h-[350px] overflow-hidden">
-                        <img src="assets/projects/PredictGrad.png"
+                        <img src="assets/projects/GaiaSentinel.png"
                             class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
@@ -360,34 +360,41 @@
                     <!-- Content -->
                     <div class="p-8">
                         <div class="flex justify-between items-start flex-wrap gap-4 mb-3">
-                            <h3 class="text-2xl font-semibold text-white">PredictGrad</h3>
+                            <h3 class="text-2xl font-semibold text-white">GaiaSentinel</h3>
                             <div class="flex gap-4 text-sm">
                                 <a href="#" class="text-primary-400 hover:underline">Live ↗</a>
                                 <a href="#" class="text-gray-400 hover:text-primary-400">GitHub ↗</a>
                             </div>
                         </div>
+                    
                         <p class="text-gray-400 mb-6 leading-relaxed">
-                            Academic risk prediction system for engineering students that detects performance decline
-                            before it happens.
+                            Real-time trash detection system using YOLOv8 trained on 1,500 annotated images across 14 waste categories,
+                            built to support environmental monitoring and smart waste classification.
                         </p>
+                    
                         <div class="space-y-2 mb-6">
-                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
-                                    class="text-primary-400 mt-0.5">→</span>
-                                Analyzed semester-wise student data to forecast Sem 3 outcomes</p>
-                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
-                                    class="text-primary-400 mt-0.5">→</span> Built
-                                risk classification model flagging students with 10%+ percentile drop</p>
-                            <p class="text-gray-500 text-sm flex items-start gap-2"><span
-                                    class="text-primary-400 mt-0.5">→</span>
-                                Deployed interactive Streamlit app with prediction and analysis modules</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span class="text-primary-400 mt-0.5">→</span> Processed
+                                and remapped 60 raw COCO categories into 14 clean waste classes across 4,784 annotations with zero errors
+                            </p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span class="text-primary-400 mt-0.5">→</span> Trained
+                                YOLOv8s on a T4 GPU for 100 epochs with HSV shift, horizontal flip, and scale augmentation</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span class="text-primary-400 mt-0.5">→</span> Dropped
+                                14 underrepresented classes below 98 annotations to reduce model confusion and improve mAP</p>
+                            <p class="text-gray-500 text-sm flex items-start gap-2"><span class="text-primary-400 mt-0.5">→</span> Deployed
+                                as a Streamlit app with image upload, live detection, and annotated bounding box output</p>
                         </div>
+                    
                         <div class="flex flex-wrap gap-2">
                             <span
                                 class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Python</span>
                             <span
-                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Pandas</span>
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">YOLOv8</span>
                             <span
-                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Scikit-Learn</span>
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Ultralytics</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">OpenCV</span>
+                            <span
+                                class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Roboflow</span>
                             <span
                                 class="px-3 py-1.5 text-xs font-medium rounded-full border border-primary-400/60 text-primary-400 bg-primary-400/15 tracking-wide">Streamlit</span>
                         </div>
